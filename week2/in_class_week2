@@ -1,0 +1,75 @@
+size(650,650);
+background(344,762,876);
+fill(900,870, 100);
+
+for (int y = 0; y<=height; y+=10){
+  for (int x= 0; x<+width; x+=100){
+    ellipse(x, y, 100, 20);
+    
+  }
+}
+fill(330,0, 11);
+for (int y = 0; y<=height; y+=50){
+  for (int x=0; x<+width; x+=77){
+    ellipse(x, y, 77,50);
+  }
+}
+
+//size(650,650);
+//background(344,762,876);
+//  fill(900,870, 100);
+
+//for (int y = 0; y<=height; y+=20){
+//  for (int x= 0; x<+width; x+=100){
+//    ellipse (x, y, 100, 20);
+  
+    
+//  }
+//}
+
+//----
+
+//int circleWidth;
+//int circleHeight;
+
+//void setup(){
+//size(640,480);
+//circleWidth = 50;
+//circleHeight = 60;
+
+//noFill();
+//background(500,90,80);
+//stroke(255,255,255);
+//}
+//void draw() {
+  
+  
+//  for(int i = 0; i<10; i++) {
+//  ellipse (width/2,height/2, circleWidth, circleHeight);
+//  circleWidth = circleWidth + 5;
+//  circleHeight = circleHeight + 20;
+//  }
+  
+//  circleWidth=50;
+//  circleHeight=60;
+
+//---
+
+//curve(-57, 619, 276, 102, 478, 319, -504, 2702);
+//curve(1236, -2739, 227, 147, 479, 317, 434, -665);
+
+//point(375,98);
+//point(456,150);
+
+
+//---
+
+//beginShape();
+//vertex(300 ,300);
+//vertex(300,90);
+//vertex(50,93);
+//vertex(50,360);
+//vertex(90,300);
+//vertex(100,260);
+//endShape();
+//}
