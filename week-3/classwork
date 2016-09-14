@@ -1,0 +1,117 @@
+
+//"CHECK THE BOUNDS" (slide title) checks where mouse's position is
+//void setup (){
+//  size(640, 480);
+//  strokeWeight(3);
+//  stroke(0);
+//}
+//void draw () {
+//  fill(255, 0, 0);
+//  rect (10, 10, 60, 60);
+//  if (mouseX > 10 && mouseX < 70 && mouseY >10 && mouseY <70){
+//    fill (0, 255, 0);
+//    rect(10, 10, 60, 60);
+//  }
+//}
+
+
+//"MAP FUNCTION" small squares on left side, bigger on right, follows mouse
+//void setup (){
+//  size(640,480);
+//  strokeWeight(3);
+//  stroke(255, 0, 0);
+//}
+//void draw() {  
+//  float mappedValue=map(mouseX,1,width,1,20);
+//  rect(mouseX,mouseY,mappedValue,mappedValue);
+//}
+
+
+//ELSE IF STATEMENTS           
+//float theDistance;
+//boolean programStarted = false;
+
+//void setup() {
+//  size(620, 480);
+//  strokeWeight(3);
+//  stroke(255, 0, 0);
+//}
+//void draw() {
+//  if (mouseX > 480) {
+//    programStarted = true;
+//    stroke (0);
+//  } else if (mouseX > 320)             
+//  {
+//    stroke ( 255);
+//  } else if (mouseX > 200) {
+//    stroke(255, 102, 102);
+//  } else {
+//    stroke (0);
+//  }
+
+// this part isnt gonna work
+  //if (programStarted) {
+  //  line (mouseX, mouseY, pmouseX, pmouseY);
+  //}
+//}
+//
+
+//MOUSE PRESSED COLOUR CHANGE tru/false   
+//float theDistance;
+//boolean programStarted = false;
+
+// void setup() {
+//   size(620, 480);
+//   strokeWeight(3);
+//   stroke(255, 0, 0);
+// }
+// void draw() {
+//   if (mousePressed) {
+//     programStarted = true;
+//     stroke (0);
+//   } 
+//   else            
+//   {
+//   stroke ( 255);    } 
+//   if (programStarted){
+//   line (mouseX,mouseY,pmouseX,pmouseY);
+// }
+// }
+
+
+//EASING
+//float x, y;
+//float easing = 0.05;
+
+//void setup() {
+//  size (640, 480);
+//}
+
+//void draw() {
+
+//        if (mousePressed) {
+//         float targetX= mouseX;
+//         float targetY= mouseY;
+//            x+= (targetX- x) * easing;
+//            y+= (targetY -y) * easing;
+//                ellipse(x, y, 12, 12);
+//              } else {
+//                ellipse(mouseX,mouseY, 12, 12);
+//              }
+//}
+
+
+//CALLIGRAPHY-LOOKING THING
+//float theDistance;
+
+//void setup() {
+//  size(620, 480);
+//  strokeWeight(3);
+//  fill(255, 0, 0);
+//}
+
+//void draw() {
+//  theDistance = dist(mouseX, mouseY, pmouseX, pmouseY);
+//  strokeWeight(theDistance);
+//  line(mouseX, mouseY, pmouseX, pmouseY);
+//}
