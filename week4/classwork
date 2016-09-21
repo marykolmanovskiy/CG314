@@ -1,0 +1,65 @@
+//FLASHY DRAKE HEAD(png) AND HOMER(svg) AND TEXT
+PImage drakeHead;
+PFont liberator;
+PShape homer;
+
+void setup() {
+  size (1000,700);
+  liberator = createFont("liberator.otf",36);
+  drakeHead = loadImage("drakeHead.png");
+  homer = loadShape("homer.svg");
+  textFont(liberator);}
+
+void draw() {
+  background (mouseX, 200,100);
+  textSize(100);
+  image(drakeHead, 0, 0);
+  fill(random(90,300),100,50);
+  text("DRAKE",600,300);
+  shape(homer, 0, 0, mouseX,mouseY);}
+  
+
+//DOG PHOTO STUFF (jpg)
+//PImage howard;
+//PImage howardGang;
+
+//void setup() {
+//  size (640,480);
+//  howard = loadImage("howard.jpg");
+//  howardGang = loadImage("howardGang.jpg");}
+
+//void draw() {
+//  background(255);
+//  image(howard, 0, 0, mouseX,mouseY);
+//  image(howardGang, 480, 360,150,150);}
+
+//SCALE FUNCTION
+//float scalar = 2.0;
+
+//void setup(){
+//  size(640,480);}
+//void draw() {
+//  rect (0,0,50,50);
+//  scale(2);
+//  strokeWeight(1.0/scalar);
+//  rect(25,25,50,50);
+//}
+
+//ROTATION FUNCTION
+//void setup(){
+//  size(640,480);}
+//void draw() {
+//  rotate(radians(45));
+//  rect (0,0,50,50);
+//}
+
+
+//TRANSLATE FUNCTION
+//void setup(){
+//   size (640, 480); }
+//void draw() {
+//   translate (200, 200);
+//   fill(255, 202, 202);
+//   rect(0,0,100,100);  
+//   translate (100,0);
+//   rect (0, 0, 100, 100);}
