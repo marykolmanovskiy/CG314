@@ -78,7 +78,6 @@ void draw () {
   
   
 //button functions
-//not sure why this first button won't work
 if (button == 1 && mousePressed){
      float mappedValue=map(mouseX,1,width,1,20);
      rect(mouseX,mouseY,mappedValue,mappedValue);}
