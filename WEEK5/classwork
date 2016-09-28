@@ -1,0 +1,233 @@
+//FULL CIRCLE MOVEMENT
+float angle = 0.0;
+float Xoffset;
+float Yoffset;
+float scalar = 200;//size of circle it goes around
+float speed = 0.2;//speed
+
+void setup(){
+  size (800,800);
+  //origin point it's revolving around
+  Xoffset = width/2;
+  Yoffset = height/2;
+}
+void draw(){
+  background (200,184,237);
+float x = Xoffset + sin(angle) *scalar;
+float y = Yoffset + cos(angle) *scalar;
+  stroke(255);
+  fill (255,202,202);
+  ellipse(x, y, 100, 100);
+
+//movement
+angle+= speed;
+}
+
+
+
+////SIN WAVE MOVEMENT
+//float angle = 0.0;
+//float offset;
+//float scalar = 80;
+//float speed = 0.05;
+
+//void setup(){
+//  size (800,800);
+//  offset = height/2;
+//}
+//void draw(){
+//  background (200,184,237);
+//float y1 = offset + sin(angle) *scalar;
+//float y2 = offset + sin(angle + 0.4) *scalar;
+//float y3 = offset + sin(angle + 0.8) *scalar;
+//  stroke(255);
+//  fill (255,202,202);
+//  ellipse(width/2-60, y1, 50, 50);
+//  ellipse(width/2, y2, 50, 50);
+//  ellipse(width/2 +60, y3, 50, 50);
+
+////movement
+//angle+= speed;
+//}
+
+
+
+//RANDOMIZE
+//float x;
+//float y;
+//float step = 3;
+
+//void setup(){
+//  size(800,800);  
+//  x = width/2;
+//  y = width/4;
+//}
+
+//void draw(){
+//  background(200,184,237);
+//  ellipse(x,y,50,50);
+//  stroke(255);
+//  fill(255, 202, 202);
+  
+//  x = x +random(-step, step);
+//  y = y +random(-step,step);
+////constrain makes sure it doesn't end up off the screen
+//  x = constrain (x, 0, width);
+//  y = constrain (y, 0, height);
+  
+//if (millis()>3000){
+//  step=130;
+//} 
+//if (millis()>5000){
+//  step=2;
+//  fill(0,0,255);
+//  ellipse(x + 50, y, 50, 50);
+//}
+//if (millis()>6000){
+//  step=10;
+//}
+//}
+  //if (xDirection>0){
+  //  xDirection=10;
+  //}else{
+  //  xDirection=-10;}
+  //if (yDirection>0){
+  //  yDirection=10;
+  //}else{
+  //  yDirection=-10;
+//}
+//
+
+
+
+//TWEENING
+//float startX = 100;
+//float startY = 100;
+//float stopX= 700;
+//float stopY = 300;
+
+//float x = startX;
+//float y = startY;
+
+//float step = 0.005; //percentage increase
+//float pct = 0.0; // percentage travelled
+
+
+//void setup(){
+//  size(800,800);  
+//}
+
+//void draw(){
+//  background(200,184,237);
+  
+//  if (pct < 1.0){
+//  x = startX + ((stopX - startX) * pct);
+//  y = startY + ((stopY - startY) *pct);
+//  pct+= step;
+//}
+  
+//  ellipse(x,y,50,50);
+//  stroke(255);
+//  fill(255, 202, 202);
+//}
+
+
+
+//BALL MOVEMENT ANGLES
+//float x;
+//float y;
+//float diameter = 50;
+//float radius = diameter/2;
+//float xDirection = 3;
+//float yDirection = 3;
+
+//void setup(){
+//  size(800,800);
+////set up x and y on top but didn't identify what they are
+////identify what x and y are here bc you can't do it up there^ it's before the setup
+//  x=radius;
+//  y=height/2;
+  
+//}
+
+//void draw(){
+//  background(200,184,237);
+//  ellipse(x,y,50,50);
+//  stroke(255);
+//  fill(255, 202, 202);
+////makes it move along the x axis
+//  x = x+ xDirection;
+//  y = y+ yDirection;
+//  if (x>width - radius || x < radius){
+//  xDirection = -xDirection;
+//  }
+//  if (y>height - radius || y < radius){
+//    yDirection = -yDirection;
+//}
+//}
+
+
+
+//BALL BOUNCES OFF WALL
+//float x;
+//float y;
+//float diameter = 50;
+//float radius = diameter/2;
+//float direction = 10;
+
+//void setup(){
+//  size(800,800);
+////set up x and y on top but didn't identify what they are
+////identify what x and y are here bc you can't do it up there^ it's before the setup
+//  x=radius;
+//  y=height/2;
+  
+//}
+
+//void draw(){
+//  background(200,184,237);
+//  ellipse(x,y,50,50);
+//  stroke(255);
+//  fill(255, 202, 202);
+////makes it move along the x axis
+//  x = x+ direction;
+//  if (x>width - radius || x < radius){
+//  direction = -direction;
+//  }
+//}
+
+
+
+//BALL DISAPPEARS OFF SIDE OF SCREEN + REAPPEARS
+//float x;
+//float y;
+//float diameter = 50;
+//float radius = diameter/2;
+////good to get into the habit of making evrything variabls
+
+
+//void setup(){
+//  size(800,800);
+////set up x and y on top but didn't identify what they are
+////identify what x and y are here bc you can't do it up there^ it's before the setup
+//  x=width/2;
+//  y=height/2;
+  
+//}
+
+//void draw(){
+//  background(200,184,237);
+//  ellipse(x,y,50,50);
+//  stroke(255);
+//  fill(255, 202, 202);
+////makes it move along the x axis
+//  x=x+5;
+////makes the ball reset when it hits the edge of the window
+//  if(x>width){
+//    x=0;
+//  }
+////makes the transition from edge of screen to start of screen seamless
+//  if(x>width + radius){
+//    x= -radius;
+//  }
+//}
